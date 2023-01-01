@@ -44,6 +44,10 @@ const setDelFile = async () => {
         loading.value = true
         try {
             await getDelFile(props.fileId)
+            if (props.fileId === store.state.checkMDId) {
+                store.commit("changeCheckMDId", '');
+                store.commit("changFileDetial", null);
+            }
             dialogVisible.value = false
             store.dispatch('setFileList')
             ElMessage.info("删除成功")

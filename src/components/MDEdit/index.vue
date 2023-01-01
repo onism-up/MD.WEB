@@ -1,9 +1,9 @@
 <template>
     <div class="md">
         <div class="md_change" :style="{
-            opacity: pageChangeLoading ? 1 : 0,
-            zIndex: pageChangeLoading ? 100 : 0
-        }">
+    opacity: pageChangeLoading ? 1 : 0,
+    zIndex: pageChangeLoading ? 100 : 0
+}">
 
         </div>
         <div class="md_edit" v-if="fileData && !pageChangeLoading">
@@ -85,14 +85,17 @@ watch(() => store.state.fileDetial, (value: FileDetialType | null) => {
     if (value) {
         eidtBody.value = value.body
         pubStatus.value = value.is_public
+        infoMsg.value = "提示：文档会在无操作一段时间后自动保存"
     }
-    eidtMode.value = false
     onPageChange()
+    eidtMode.value = false
+
 }, {
     immediate: true
 })
 
 const exitEdit = () => {
+    pageChangeLoading.value = true
     eidtMode.value = false
     store.dispatch("setFileDetail", store.state.checkMDId)
 }
