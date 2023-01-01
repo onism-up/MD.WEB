@@ -1,0 +1,23 @@
+
+:root{
+    --el-color-primary:#767676 !important ;
+    --el-color-primary-light-3:#555555 !important;
+    --el-color-primary-dark-2:#8f8f8f !important ; 
+    --el-color-primary-light-9:#cccccc !important;
+    --el-color-primary-light-7: #d1d1d1 !important;
+    --el-border-radius-small:10px !important;
+    --el-color-primary-light-5: #cbcbcb !important;
+}
+.el-dialog{
+    --el-dialog-padding-primary:10px !important;
+
+}
+
+.el-dialog--center .el-dialog__body{
+    padding: 10px calc(var(--el-dialog-padding-primary) + 5px) 10px !important;
+}
+
+.el-overlay-dialog{
+    overflow: hidden !important;
+}
+

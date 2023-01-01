@@ -1,0 +1,50 @@
+
+
+:root{
+    --Greeting_Color:rgb(104, 104, 104);//问候语颜色
+    --SiderBarBgc:rgb(247, 247, 245);//侧边栏颜色
+    --Sys_Font_Color:rgb(152, 151, 147); //列表文字颜色
+    --Search_Info_Color:rgb(119, 118, 114);
+    --Search_Select_Color:rgb(55, 53, 47);
+    --Search_Result_None:rgb(125, 124, 120);
+    --Search_Result_Border_Color:rgb(243, 243, 243);
+    --Search_Result_Bright_BGColor:rgb(210, 210, 210);
+    --Search_Result_Click_BGColor:rgb(200, 200, 200);
+    --Md_Read_None_Color:rgb(175, 174, 172);
+    --Md_Titel_Color:rgb(55, 53, 47);
+    --List_None_File:rgb(175, 174, 172);
+    --Md_Change_BGC:rgb(255,255,255);
+    --File_List_Tital:rgb(104, 104, 104);
+    --MD_Edit_BGC:rgb(255,255,255);
+}
+
+:root div[data-theme="dark"]{
+    --SiderBarBgc:rgb(32, 32, 32);
+    --Greeting_Color:rgb(212, 212, 212);
+    --Sys_Font_Color:rgb(155, 155, 155);
+    --File_List_Tital:rgb(212, 212, 212);
+    --MD_Edit_BGC:rgb(25, 25, 25);
+    --Md_Titel_Color:rgb(212, 212, 212);
+    --Md_Change_BGC:rgb(10,10,10);
+    .el-dialog {
+        --el-dialog-bg-color: rgb(60 60 60) ;
+        --el-text-color-primary: #303133;
+        --el-text-color-primary: rgb(195 195 195);
+        --el-fill-color-blank: rgb(38 37 37);
+        --Search_Select_Color:rgb(230, 230, 230);
+        --Search_Result_Border_Color:rgb(80, 80, 80);
+        --Search_Result_Bright_BGColor:rgb(30, 30, 30);
+        --Search_Result_Click_BGColor:rgb(10, 10, 10);
+        --el-text-color-regular: rgb(173 173 173);
+        
+    }
+    .md-editor-dark{
+        --md-bk-color: var(--MD_Edit_BGC);
+        .default-theme pre:before {
+            background-color: #464646;
+        }
+        .default-theme pre code {
+            background-color: #3a3a3a;
+        }
+    }
+}
