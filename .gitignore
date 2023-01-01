@@ -116,4 +116,5 @@ dist
 .pnp.*
 
 
-vscode
+.vscode/*
+!.vscode/launch.json
