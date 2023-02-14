@@ -1,3 +1,3 @@
-const ServerPath = "http://127.0.0.1:8171/api";
+const ServerPath = "http://192.168.124.17:8071/api";
 
 export { ServerPath };

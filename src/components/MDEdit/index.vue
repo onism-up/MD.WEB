@@ -1,9 +1,9 @@
 <template>
     <div class="md">
         <div class="md_change" :style="{
-    opacity: pageChangeLoading ? 1 : 0,
-    zIndex: pageChangeLoading ? 100 : 0
-}">
+            opacity: pageChangeLoading ? 1 : 0,
+            zIndex: pageChangeLoading ? 100 : 0
+        }">
 
         </div>
         <div class="md_edit" v-if="fileData && !pageChangeLoading">
@@ -24,7 +24,7 @@
                         退出编辑
                     </el-button>
                     <el-button :type="pubStatus ? 'success' : 'danger'" size="small" @click="changePub">
-                        {{ pubStatus ? "公开的" : "私有的" }}
+                        {{ pubStatus? "公开的": "私有的" }}
                     </el-button>
                     <el-tag type="warning" class="info">{{ infoMsg }}</el-tag>
                 </div>
@@ -55,6 +55,14 @@ import MdEditor from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
 import { debounce, cloneDeep } from "lodash"
 import { useDialog } from "@/tools/elm"
+
+MdEditor.config({
+    markedRenderer(renderer) { //更改编辑器标题自带a标签跳转，渲染为纯Text
+        renderer.heading = (text: string, level: 1 | 2 | 3 | 4 | 5 | 6) => `<h${level}>${text}</h${level}>`
+
+        return renderer;
+    }
+});
 
 const theme = computed<"light" | "dark">(() => store.state.theme)
 

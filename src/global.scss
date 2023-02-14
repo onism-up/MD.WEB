@@ -16,6 +16,7 @@
     --Md_Change_BGC:rgb(255,255,255);
     --File_List_Tital:rgb(104, 104, 104);
     --MD_Edit_BGC:rgb(255,255,255);
+    --SiderBarBorder:rgb(222,222,220);
 }
 
 :root div[data-theme="dark"]{
@@ -26,6 +27,7 @@
     --MD_Edit_BGC:rgb(25, 25, 25);
     --Md_Titel_Color:rgb(212, 212, 212);
     --Md_Change_BGC:rgb(10,10,10);
+    --SiderBarBorder:rgb(55, 55, 55);
     .el-dialog {
         --el-dialog-bg-color: rgb(60 60 60) ;
         --el-text-color-primary: #303133;

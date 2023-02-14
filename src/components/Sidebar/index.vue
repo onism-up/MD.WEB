@@ -141,8 +141,8 @@ const uploadDialog = useDialog()
             <FileList @list-click="fileListClick" />
         </div>
         <div class="regulator" @mousedown="(canChangeWidth = true)" @mousemove='opacity = "1"' :style="{
-    opacity
-}" />
+            opacity
+        }" />
     </div>
     <Search :use="searchDialog" @list-click="searchClick" />
     <Setting :use="settingDialog" />
@@ -170,7 +170,7 @@ const uploadDialog = useDialog()
         cursor: col-resize;
         position: absolute;
         transition: all 0.2s ease;
-        background-color: RGB(222, 222, 220);
+        background-color: var(--SiderBarBorder);
         opacity: 0;
     }
 

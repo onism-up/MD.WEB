@@ -4,12 +4,14 @@ import { ElLoading, ElMessage } from 'element-plus'
 import { getServerStatus, getUserInit } from "@/ajax/api"
 import { useRouter } from 'vue-router';
 import cache from '@/cache';
+
+
 onMounted(() => {
     connectServer()
 })
 
 const router = useRouter()
-
+18
 const loading = ElLoading.service({
     lock: true,
     text: '正在测试本地与服务器的连接'
@@ -25,7 +27,10 @@ const connectServer = async () => {
         try {
             await getUserInit()
             const isFirst = cache.getItem("first")
-            if (isFirst) ElMessage.info("欢迎来到MD.WEB")
+            if (isFirst) {
+                ElMessage.info("欢迎来到MD.WEB")
+                cache.setItem("first", false)
+            }
             try {
                 router.push("/home")
             } catch (e) {
